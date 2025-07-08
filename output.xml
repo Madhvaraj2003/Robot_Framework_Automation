@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.2 on win32)" generated="2025-07-08T14:55:28.025558" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Logout Test" source="c:\Users\Dell\Desktop\PAT Robot\Tests\login_logout_test.robot">
+<test id="s1-t1" name="Verify Login Form Submission And Logout" line="9">
+<kw name="Open Browser To Login Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-08T14:55:28.427833" level="INFO">Opening browser 'Chrome' to base url 'https://robotsparebinindustries.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-08T14:55:28.427380" elapsed="2.880684"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-08T14:55:31.308826" elapsed="0.744842"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-08T14:55:32.054115" elapsed="0.039408"/>
+</kw>
+<status status="PASS" start="2025-07-08T14:55:28.426260" elapsed="3.667673"/>
+</kw>
+<kw name="Input Valid Credentials And Submit" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-08T14:55:32.098087" level="INFO">Typing text 'maria' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-08T14:55:32.096993" elapsed="0.179999"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-08T14:55:32.277912" level="INFO">Typing text 'thoushallnotpass' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-08T14:55:32.277379" elapsed="0.126589"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-08T14:55:32.404591" level="INFO">Clicking button 'css:button[type="submit"]'.</msg>
+<arg>css:button[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-08T14:55:32.404264" elapsed="0.097660"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:firstname</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-08T14:55:32.502217" elapsed="0.236118"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id:firstname</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-07-08T14:55:32.738647" elapsed="0.029059"/>
+</kw>
+<status status="PASS" start="2025-07-08T14:55:32.094662" elapsed="0.673288"/>
+</kw>
+<kw name="Fill Sales Form And Submit" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-08T14:55:32.769810" level="INFO">Typing text 'Madhva' into text field 'id:firstname'.</msg>
+<arg>id:firstname</arg>
+<arg>${FIRST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-08T14:55:32.769157" elapsed="0.100951"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-08T14:55:32.871328" level="INFO">Typing text 'Raj' into text field 'id:lastname'.</msg>
+<arg>id:lastname</arg>
+<arg>${LAST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-08T14:55:32.870637" elapsed="0.109575"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-08T14:55:32.981473" level="INFO">Typing text '90' into text field 'id:salesresult'.</msg>
+<arg>id:salesresult</arg>
+<arg>${SALES_RESULT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-08T14:55:32.980636" elapsed="0.097074"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-08T14:55:33.079974" level="INFO">Clicking button 'xpath=//button[@type="submit"]'.</msg>
+<arg>xpath=//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-08T14:55:33.078642" elapsed="0.101553"/>
+</kw>
+<status status="PASS" start="2025-07-08T14:55:32.768497" elapsed="0.412101"/>
+</kw>
+<kw name="Validate Sales Entry Appeared" owner="keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${FIRST_NAME} ${LAST_NAME}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-08T14:55:33.184087" elapsed="0.270109"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-08T14:55:33.472536" level="INFO">Current page contains text '90'.</msg>
+<arg>${SALES_RESULT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-07-08T14:55:33.454544" elapsed="0.018258"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-07-08T14:55:33.488949" level="INFO">Current page contains element 'xpath= //*[@id="root"]/div/div/div/div[2]/div[3]/button[2]'.</msg>
+<arg>xpath= //*[@id="root"]/div/div/div/div[2]/div[3]/button[2]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-07-08T14:55:33.473037" elapsed="0.016255"/>
+</kw>
+<status status="PASS" start="2025-07-08T14:55:33.183258" elapsed="0.306240"/>
+</kw>
+<kw name="Logout From Application" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.btn.btn-danger</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-08T14:55:33.490866" elapsed="0.024204"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-08T14:55:33.515691" level="INFO">Clicking element 'css:.btn.btn-danger'.</msg>
+<arg>css:.btn.btn-danger</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-08T14:55:33.515373" elapsed="0.067037"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-08T14:55:33.582744" elapsed="2.216951"/>
+</kw>
+<status status="PASS" start="2025-07-08T14:55:33.490154" elapsed="2.310513"/>
+</kw>
+<doc>Log in, fill and submit sales form, verify entry, and logout.</doc>
+<status status="PASS" start="2025-07-08T14:55:28.424028" elapsed="7.378364"/>
+</test>
+<status status="PASS" start="2025-07-08T14:55:28.033556" elapsed="7.775758"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Logout Test" id="s1" pass="1" fail="0" skip="0">Login Logout Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
